@@ -13,7 +13,7 @@ public class DemoController
     {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         authentication.getAuthorities()
-                .forEach(a -> System.out.println(a));
+                .forEach(System.out::println);
 
         return "Demo";
     }
